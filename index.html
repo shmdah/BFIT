@@ -45,9 +45,9 @@
         
         /* Buttons */
         .btn {
-            display: inline-block; padding: 14px 32px; font-weight: 700;
+            display: inline-block; padding: 12px 28px; font-weight: 700;
             text-transform: uppercase; letter-spacing: 1px; border-radius: 50px;
-            cursor: pointer; transition: var(--transition); font-size: 0.9rem; margin-top: 10px;
+            cursor: pointer; transition: var(--transition); font-size: 0.85rem; margin-top: 10px;
         }
         .btn-primary { 
             background-color: var(--accent-lime); color: var(--bg-color); border: 2px solid var(--accent-lime); 
@@ -69,16 +69,17 @@
             padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.1);
         }
         .nav-container { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.8rem; font-weight: 900; letter-spacing: -1px; }
+        .logo { font-size: 1.5rem; font-weight: 900; letter-spacing: -1px; }
         .logo span { color: var(--accent-lime); }
         
         .nav-links { display: flex; gap: 30px; }
         .nav-links a { font-size: 0.9rem; font-weight: 600; text-transform: uppercase; }
         .nav-links a:hover { color: var(--accent-lime); }
         
+        /* Smaller Hamburger */
         .hamburger { 
-            display: none; cursor: pointer; font-size: 1.8rem; color: white; 
-            padding: 8px 12px; border: 1px solid rgba(255,255,255,0.2);
+            display: none; cursor: pointer; font-size: 1.2rem; color: white; 
+            padding: 6px 10px; border: 1px solid rgba(255,255,255,0.2);
             border-radius: 5px; background: rgba(0,0,0,0.5);
         }
 
@@ -98,12 +99,20 @@
         }
         .hero-content h1 { font-size: 4rem; margin-bottom: 15px; line-height: 1.1; text-shadow: 0 0 20px rgba(0,0,0,0.8); }
         .hero-content p { font-size: 1.2rem; color: #ddd; margin-bottom: 25px; text-shadow: 0 0 10px rgba(0,0,0,0.8); }
+        
+        /* Updated Tagline: No Box, Just Text */
         .tagline-box {
-            display: inline-block; border-top: 1px solid var(--accent-lime);
-            border-bottom: 1px solid var(--accent-lime); padding: 10px 20px; margin-bottom: 30px;
-            font-family: var(--font-heading); font-weight: 700; letter-spacing: 2px;
-            color: var(--accent-lime); background: rgba(0,0,0,0.4);
+            display: block;
+            margin-bottom: 20px;
+            font-family: var(--font-heading); 
+            font-weight: 700; 
+            letter-spacing: 2px;
+            color: var(--accent-lime); 
+            background: transparent;
+            border: none;
+            font-size: 1rem;
         }
+        
         .hero-buttons { display: flex; gap: 15px; justify-content: center; }
         
         .ribbon {
@@ -205,16 +214,21 @@
             .nav-links {
                 display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
                 background: rgba(0, 0, 0, 0.98); flex-direction: column; justify-content: center; 
-                align-items: center; gap: 40px; z-index: 999;
+                align-items: center; gap: 25px; /* Smaller gap */
+                z-index: 999;
             }
             .nav-links.active { display: flex; }
-            .nav-links a { font-size: 2rem; font-weight: 800; letter-spacing: 2px; }
+            /* Smaller Menu Text */
+            .nav-links a { font-size: 1.3rem; font-weight: 700; letter-spacing: 1px; }
             .hamburger { display: block; z-index: 1001; }
             
-            h1 { font-size: 2.5rem !important; }
-            h2 { font-size: 2rem !important; }
+            /* Smaller Home Text */
+            h1 { font-size: 2rem !important; } 
+            h2 { font-size: 1.8rem !important; }
+            
+            /* Tweak Hero Buttons for Mobile */
             .hero-buttons { flex-direction: column; width: 100%; }
-            .hero-buttons .btn { width: 100%; text-align: center; margin-top: 0; }
+            .hero-buttons .btn { width: 100%; text-align: center; margin-top: 5px; padding: 12px 0; }
             
             /* Disable Parallax on Mobile */
             .parallax-break, .parallax-section, .hero-section { background-attachment: scroll !important; }
@@ -256,6 +270,7 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>Welcome to <br> <span class="text-accent">B-Fit Arena</span></h1>
+            <!-- Clean Text Tagline (No Box) -->
             <div class="tagline-box">PLAY | CHILL | EAT | REPEAT</div>
             <p>A state-of-the-art Sports & Recovery facility in Karen, Nairobi.</p>
             <div class="hero-buttons">
