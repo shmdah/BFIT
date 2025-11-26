@@ -112,6 +112,18 @@
         .btn-ghost { background-color: transparent; color: var(--text-color); border: 2px solid var(--text-color); }
         .btn-ghost:hover { border-color: var(--accent-lime); color: var(--accent-lime); }
 
+        /* Timer Title */
+        .timer-title {
+            font-family: var(--font-heading);
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
         /* Glass Timer */
         .glass-timer {
             display: inline-flex; gap: 20px;
@@ -273,7 +285,7 @@
             .split-media { height: 400px; width: 100%; order: -1; }
             .split-text { padding: 60px 30px; }
             
-            /* Disable fixed parallax on touch devices (CRITICAL FOR MOBILE LAG) */
+            /* Disable fixed parallax on touch devices */
             .parallax-break { background-attachment: scroll !important; }
             .break-text { font-size: 1.5rem; padding: 20px 40px; }
             
@@ -356,6 +368,8 @@
                     <a onclick="showPage('register-view')" class="btn btn-primary">Early Bird</a>
                     <a onclick="showPage('padel-view')" class="btn btn-ghost">Explore</a>
                 </div>
+
+                <div class="timer-title">LAUNCH DAY</div>
 
                 <!-- GLASS COUNTDOWN TIMER -->
                 <div class="glass-timer" id="countdown">
@@ -647,7 +661,7 @@
             }
         });
 
-        // 3. COUNTDOWN TIMER
+        // 3. COUNTDOWN TIMER (40 Days from now)
         const now = new Date();
         const launchDate = new Date(now.getTime() + (40 * 24 * 60 * 60 * 1000));
 
