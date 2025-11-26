@@ -208,35 +208,52 @@
         }
         .pillar-link { color: var(--accent-lime); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; }
 
-        /* --- 8. RESPONSIVE --- */
-        @media (max-width: 768px) {
+        /* --- 8. RESPONSIVE (UPDATED FOR TABLETS & MOBILE) --- */
+        @media (max-width: 1024px) {
             .nav-links {
                 display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
                 background: rgba(0, 0, 0, 0.98); flex-direction: column; justify-content: center; 
                 align-items: center; gap: 30px; z-index: 999;
             }
             .nav-links.active { display: flex; }
-            .nav-links a { font-size: 1.1rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; }
+            .nav-links a { font-size: 1.2rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
             .hamburger { display: block; z-index: 1001; }
             
-            h1 { font-size: 2.2rem !important; } 
+            /* Adjust Text Sizes for Tablet/Mobile */
+            h1 { font-size: 2.5rem !important; } 
+            .hero-content h1 { font-size: 3rem !important; }
             
-            .glass-timer { gap: 15px; padding: 15px; width: 95%; justify-content: center; }
-            .time-value { font-size: 1.5rem; }
-            .time-label { font-size: 0.6rem; }
+            /* Glass Timer Adjustments */
+            .glass-timer { gap: 15px; padding: 15px; width: 95%; justify-content: center; max-width: 500px; margin: 0 auto 20px auto; }
+            .time-value { font-size: 1.8rem; }
+            .time-label { font-size: 0.7rem; }
 
+            /* Stack Split Sections for Tablets & Mobile */
             .split-section, .split-section.reverse { flex-direction: column; }
-            .split-media { height: 300px; width: 100%; order: -1; }
-            .split-text { padding: 40px 20px; }
+            .split-media { height: 400px; width: 100%; order: -1; }
+            .split-text { padding: 60px 30px; }
             
-            /* Disable fixed parallax on mobile */
+            /* Disable fixed parallax on touch devices */
             .parallax-break { background-attachment: scroll !important; }
-            .break-text { font-size: 1.2rem; padding: 15px 30px; }
+            .break-text { font-size: 1.5rem; padding: 20px 40px; }
             
-            .features-grid { padding: 40px 20px; }
+            .features-grid { padding: 60px 30px; }
             
             form { grid-template-columns: 1fr; }
             .full-width { grid-column: span 1; }
+        }
+
+        @media (max-width: 768px) {
+            /* Further adjustments for smaller mobile screens */
+            .nav-links a { font-size: 1.1rem; }
+            h1 { font-size: 2.2rem !important; } 
+            .hero-content h1 { font-size: 2.5rem !important; }
+            .split-media { height: 300px; }
+            .split-text { padding: 40px 20px; }
+            .break-text { font-size: 1.2rem; padding: 15px 30px; }
+            .features-grid { padding: 40px 20px; }
+            .glass-timer { width: 100%; }
+            .time-value { font-size: 1.5rem; }
         }
     </style>
 </head>
@@ -378,7 +395,8 @@
                 </div>
             </div>
             <div class="split-media">
-                <img src="https://images.unsplash.com/photo-1599474924187-334a4ae5bd3c?q=80&w=2083" alt="Coaching">
+                <!-- UPDATED: Image of guys playing padel -->
+                <img src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?q=80&w=2207&auto=format&fit=crop" alt="Guys Playing Padel">
             </div>
         </section>
     </div>
@@ -476,7 +494,8 @@
                 </div>
             </div>
             <div class="split-media">
-                <img src="https://images.unsplash.com/photo-1544367563-12123d8965cd?q=80&w=2070" alt="Spa">
+                <!-- UPDATED: Distinct Spa Image -->
+                <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?q=80&w=2070" alt="Spa Recovery">
             </div>
         </section>
     </div>
